@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remover tarefa</title>
+</head>
+<body>
+    <h1>Remover tarefa</h1>
+    <form action="/remove" method="post">
+        <select name="id">
+            {% for task in tasks %}
+                <option value="{{ loop.index }}">{{ task }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Remover">
+    </form>
+</body>
+</html>
